@@ -1,24 +1,6 @@
-# Debug Mode
+# View More Cards
 
-Enables the Debug mode for the game.  
-AKA the Cheat Menu.
-
-Useful for debugging mods
-
-# Hot Keys
-
-
-|Key|Description|
-|--|--|
-|F|Shows the FPS counter|
-|KeypadDivide|Opens the Endgame Journal in Game Over Mode|
-|KeypadMultiply|Opens the Endgame Journal|
-|V|Shows the Cheats Menu|
-
-The keys can be configured in the configuration file.
-```<Steam Dir>\steamapps\common\Card Survival Tropical Island\BepInEx\config\DebugMode.cfg````
-
-
+Changes the game to show about 60% more cards on a line.
 
 # Installation 
 This mod requires the BepInEx mod loader.
@@ -38,9 +20,9 @@ Download BepInEx from https://github.com/BepInEx/BepInEx/releases/download/v5.4.
 * In the BepInEx folder, there will now be a "plugins" directory.
 
 ## Mod Setup
-* Download the DebugMode.zip.  
+* Download the ViewMoreCards.zip.  
     * If on Nexumods.com, download from the Files tab.
-    * Otherwise, download from https://github.com/NBKRedSpy/CardSurvival-DebugMode/releases/
+    * Otherwise, download from https://github.com/NBKRedSpy/CardSurvival-ViewMoreCards/releases/
 
 * Extract the contents of the zip file into the ```BepInEx/plugins``` folder.
 
@@ -58,7 +40,7 @@ Delete the BepInEx folder from the game's directory
 
 This method removes this mod, but keeps the BepInEx mod loader and any other mods.
 
-Delete the ```DebugMode.dll``` from the ```<Steam Directory>\steamapps\common\Card Survival Tropical Island\BepInEx\plugins``` directory.
+Delete the ```ViewMoreCards.dll``` from the ```<Steam Directory>\steamapps\common\Card Survival Tropical Island\BepInEx\plugins``` directory.
 
 # Compatibility
 Safe to add and remove from existing saves.
