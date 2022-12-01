@@ -36,11 +36,18 @@ namespace ViewMoreCards
                 //Character equipment
                 gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/CharacterWindow/DarkBG/ShadowAndPopupWithTitle/Content" +
                     "/Cards/CharacterSlotsViewport");
-
                 gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
-
                 rect = gameObject.GetComponent<RectTransform>();
                 rect.sizeDelta = new Vector2(500, 0);
+
+                //---Blueprints cards
+                gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/BlueprintModelsWindow/ShadowAndPopupWithTitle/Content" +
+                    "/Blueprints/BlueprintsViewport");
+
+                gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
+                rect = gameObject.GetComponent<RectTransform>();
+                rect.sizeDelta = new Vector2(960, 0);
+
 
                 ResizeContainerScreen();
 
