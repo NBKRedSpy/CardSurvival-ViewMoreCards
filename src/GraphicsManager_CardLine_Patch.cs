@@ -21,28 +21,67 @@ namespace ViewMoreCards
                 RectTransform rect;
                 GameObject gameObject;
 
-                gameObject = GameObject.Find("MainCanvas/SlotsCanvas/Base/BaseViewport");
-                gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
-                rect = gameObject.GetComponent<RectTransform>();
-                rect.sizeDelta = new Vector2(700, 0);
-
+                //The Location card row (top)
                 gameObject = GameObject.Find("MainCanvas/SlotsCanvas/Environment/Locations");
                 gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
                 rect = gameObject.GetComponent<RectTransform>();
                 rect.sizeDelta = new Vector2(625, 0);
 
+                //The base's inventory (Middle)
+                gameObject = GameObject.Find("MainCanvas/SlotsCanvas/Base/BaseViewport");
+                gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
+                rect = gameObject.GetComponent<RectTransform>();
+                rect.sizeDelta = new Vector2(700, 0);
 
-                gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/CharacterWindow/DarkBG/ShadowAndPopupWithTitle/Content/Cards/CharacterSlotsViewport");
+                //Character equipment
+                gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/CharacterWindow/DarkBG/ShadowAndPopupWithTitle/Content" +
+                    "/Cards/CharacterSlotsViewport");
+
                 gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
 
                 rect = gameObject.GetComponent<RectTransform>();
                 rect.sizeDelta = new Vector2(500, 0);
+
+                ResizeContainerScreen();
+
             }
             catch (Exception ex)
             {
                 Plugin.LogInfo($"error changing canvas: {ex}");
             }
 
+        }
+
+        private static void ResizeContainerScreen()
+        {
+            RectTransform rect;
+            GameObject gameObject;
+
+            //--Inventory for a container.
+            //Note - Some layout is automatically repositioning the contents.  This works, but I'm sure there is an easier way
+            //to adjust the area as a whole.
+
+            //The cards in the inventory (the right of the container card)
+            gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/InventoryInspectionWindow/ShadowAndPopupWithTitle/Content/" +
+                "InspectionGroup/InventoryGroup/Inventory");
+            gameObject.transform.localScale = new Vector3(.6f, .6f, 1f);
+
+            //The box around the cards
+            gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/InventoryInspectionWindow/ShadowAndPopupWithTitle/Content/" +
+                "InspectionGroup/InventoryGroup/Inventory/Frame");
+            rect = gameObject.GetComponent<RectTransform>();
+            rect.sizeDelta = new Vector2(800, 0);
+
+            //The Cards area
+            gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/InventoryInspectionWindow/ShadowAndPopupWithTitle/Content/" +
+                "InspectionGroup/InventoryGroup/Inventory/InventoryViewport");
+            rect = gameObject.GetComponent<RectTransform>();
+            rect.sizeDelta = new Vector2(790, 0);
+
+            gameObject = GameObject.Find("MainCanvas/PopupWindowsCanvas/InventoryInspectionWindow/ShadowAndPopupWithTitle/Content/InspectionGroup/InventoryGroup/Inventory/ScrollbarHorizontal");
+            gameObject.transform.localPosition = new Vector3(-992, 0, 0);
+            rect = gameObject.GetComponent<RectTransform>();
+            rect.sizeDelta = new Vector2(790, 20);
         }
     }
 }
