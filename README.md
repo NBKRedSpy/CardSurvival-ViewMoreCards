@@ -1,4 +1,5 @@
 # View More Cards
+![Size Difference Illustration](./media/SizeDifference.png)
 
 Changes the game to show about 60% more cards on a line.
 
