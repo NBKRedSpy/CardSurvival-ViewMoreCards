@@ -3,9 +3,6 @@
 
 Changes the game to show about 60% more cards on a line.
 
-# Note for v1.05 Beta
-6/2/2023 - For Card Survival v1.05+ Beta, use the 2.0 version of this mod.
-
 # Installation 
 This section describes how to manually install the mod.
 
